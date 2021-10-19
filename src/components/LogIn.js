@@ -24,7 +24,7 @@ const Login = (props) => {
         localStorage.setItem("token", json.authToken);
         history.push("/user");
       } else {
-        history.push("/login");
+        history.push("/");
       }
     };
     const handleChange = (e) => {
@@ -39,6 +39,10 @@ const Login = (props) => {
             <input type="password" name="password" value={credentials.password} onChange={handleChange}  placeholder="Enter your Password" ></input>
             <div><button type="submit" className="button">Submit</button></div>
             </form>
+            <div>or</div>
+            <button onClick={()=>{history.push('/')}} className="button">
+          Sign Up
+        </button>
         </div>
     )
 }

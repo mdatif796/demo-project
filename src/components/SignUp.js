@@ -107,10 +107,12 @@ const SignUp = () => {
           required
         ></input>
         <button type="submit" onChange={handleChange} className="button">
-          Sign Up
+          Submit
         </button>
       </form>
-      <button onClick={history.push('/login')} className="button">
+      <div>or</div>
+      <div>Already an account</div>
+      <button onClick={()=>{history.push('/login')}} className="button">
           Log In
         </button>
     </div>
